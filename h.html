@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="e.css">
+    <link rel="stylesheet" href="g.css">
+    <Style>body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f2f2f2;
+    }
+
+    .options-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .option-button {
+        padding: 15px 40px; /* 調整按鈕尺寸 */
+        margin-bottom: 20px;
+        border: 2px solid transparent; /* 初始時無邊框 */
+        border-radius: 10px; /* 圓角 */
+        background-color: #fff;
+        font-size: 18px;
+        color: #333;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* 添加陰影效果 */
+        font-family: 'Helvetica Neue', sans-serif; /* 更改字體 */
+    }
+    
+    .option-button:hover,
+        .option-button:active {
+            background-color: #e0e0e0;
+            border-color: #999; /* 添加按下效果 */
+        }
+    </Style>
+    <title>Login Page</title>
+</head>
+<body class="loginpage">
+    <div id='in'>
+    <div  class="container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+
+            <label for="captcha">Captcha:</label>
+            <input type="text" id="captcha" required>
+
+            <button type="button" onclick='submitLoginForm()'>Login</button>
+        </form>
+        <p id="resultMessage"></p>
+    </div>
+    </div>
+    <div id='out' style="display:none;">
+        <div  class="container">
+            <div class="options-container">
+                <a href="#" class="option-button" onclick="goBack()">回上一頁</a>
+                <a href="#" class="option-button" onclick="sm()">儲存選單</a>
+                <a href="#" class="option-button" onclick="logout()">登出</a>
+            </div>
+        </div>
+    </div>
+    <script src="f.js"></script>
+</body>
+</html>
