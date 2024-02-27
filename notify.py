@@ -20,13 +20,11 @@ def getNotifyToken(AuthorizeCode):
     r = requests.post("https://notify-bot.line.me/oauth/token", data=body)
     return r.json()["access_token"]
 
-
 def lineNotifyMessage(token, msg):
     headers = {
         "Authorization": "Bearer " + token,
         "Content-Type": "application/x-www-form-urlencoded"
     }
-
     payload = {'message': msg}
     r = requests.post("https://notify-api.line.me/api/notify", headers=headers, data=payload)
     return r.status_code
